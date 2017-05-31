@@ -30,18 +30,24 @@
            <%= link_to "Sign In", new_user_session_path, class: "btn btn-default"  %>
         <% end %>
       </div>
-   </ul>
-   <% if flash[:notice] %>
+      </ul>
+    
+   
+     <% if flash[:notice] %>
        <div class="alert alert-success">
          <button type="button" class="close" data-dismiss="alert">&times;</button>
          <%= flash[:notice] %>
        </div>
-   <% elsif flash[:alert] %>
+     <% elsif flash[:alert] %>
        <div class="alert alert-warning">
          <button type="button" class="close" data-dismiss="alert">&times;</button>
          <%= flash[:alert] %>
        </div>
-   <% end %>
+     <% end %>
+   
     <%= yield %>
+   
+   </div>
+   
   </body>
 </html>
