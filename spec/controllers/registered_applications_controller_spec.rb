@@ -72,7 +72,7 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
 
       it "redirects to index" do
         delete :destroy, params: {id: registered_application.id}
-        expect(response).to have_http_status(:success)     
+        expect(response).to redirect_to root_path  
       end
     end
 
