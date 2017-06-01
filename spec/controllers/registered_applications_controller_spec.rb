@@ -12,7 +12,7 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
       @user   = user
       sign_in   @user
     end
-    
+
     describe 'GET new' do
       it 'returns http success' do
         get :new
@@ -62,8 +62,6 @@ RSpec.describe RegisteredApplicationsController, type: :controller do
         expect(assigns(:registered_application)).to eq(registered_application)
       end
     end
-    
-    
  
     describe "DELETE destroy" do
       it "deletes the registered_application" do
