@@ -29,9 +29,9 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'shoulda'
-  gem 'faker'
   gem 'factory_girl_rails'
   gem 'simplecov'
+  gem 'rails-controller-testing'
 end
 
  group :development, :test do
@@ -41,10 +41,10 @@ end
  end
 
  gem 'bootstrap-sass'
-
+ gem 'faker'
  gem 'devise'
- gem "pundit"
- gem "faker"
+ gem 'pundit'
+ 
 
  # Use SCSS for stylesheets
  gem 'sass-rails', '~> 5.0'
