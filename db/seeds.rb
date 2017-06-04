@@ -16,14 +16,24 @@ require 'faker'
         password:               pwd,
         password_confirmation:  pwd
     )
+
+    User.create!(
+        email:                  "mentor@bloc.io",
+        password:               "helloworld",
+        password_confirmation:  "helloworld"
+    )
+
+    users = User.all
     
-    5.times do 
+    25.times do 
         RegisteredApplication.create!(
-          user:    User.find(3),
+          user:    users.sample,
           name:    Faker::Company.name,
           url:     Faker::Internet.url
         )
     end
+
+    apps = RegisteredApplication.all
     
     registered_applications = RegisteredApplication.all
     
@@ -35,12 +45,11 @@ require 'faker'
     end
     
     puts "#{User.count} users created"
-    puts "#{User.all}"
+    puts "#{User.all.count} users total"
     
-    puts "#{RegisteredApplication.count} RegisteredApplication created"
-    puts "#{RegisteredApplication.all}"
-    puts "#{User.first.registered_applications}"
+    puts "#{RegisteredApplication.count} applications created"
+    puts "#{RegisteredApplication.all.count} applications total"
     
-    puts "#{Event.count} Events created"
-    puts "#{Event.all}"
+    puts "#{Event.count} events created"
+    puts "#{Event.all.count} events total"
     
