@@ -603,6 +603,17 @@
         null,
         null
       ],
+      "/home/ubuntu/workspace/webAnalytics/spec/factories/event.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/home/ubuntu/workspace/webAnalytics/spec/factories/registered_applications.rb": [
         1,
         null,
@@ -684,6 +695,7 @@
         null,
         null,
         1,
+        3,
         3,
         null,
         null,
@@ -804,14 +816,22 @@
       "/home/ubuntu/workspace/webAnalytics/app/models/registered_application.rb": [
         1,
         1,
+        1,
         null,
         28,
         null,
         1,
         1,
         null
+      ],
+      "/home/ubuntu/workspace/webAnalytics/app/models/event.rb": [
+        1,
+        1,
+        null,
+        1,
+        null
       ]
     },
-    "timestamp": 1496353201
+    "timestamp": 1496557398
   }
 }
