@@ -5,3 +5,23 @@
     </div>    
 <div class="col-md-4"></div>    
 </div>
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th class="col-md-8">Event Name</th>
+        <th class="col-md-4">Event Count</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr> 
+        <% @events.each do |event| %>
+          <td class="col-md-8"><%= event.name %></td>
+          <td class="col-md-4"></td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  
