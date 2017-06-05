@@ -22,17 +22,15 @@
          render json: "Unregistered application", status: :unprocessable_entity
      end
     
-     @event = Event.new
-     @user  = current_user
-     @event = registered_application.events.build(event_params)
-   
-     if (@event.save) 
-         flash[:notice]    = "Event successfully saved."
-         render json: @event, status: :created
+     @event = registered_application.events.new(event_params)
+    
+     if @event.valid?
+       @event.save!
+       render json: @event, status: :created
      else
-         flash[:alert]    = "Event could not be saved!"
-         render json: {errors: @event.errors}, status: :unprocessable_entity
+       render json: {errors: @event.errors}, status: :unprocessable_entity
      end
+    
    end
    
    private
