@@ -24,7 +24,7 @@
     
      @event = Event.new
      @user  = current_user
-     @event = registered_application.event.build(event_params)
+     @event = registered_application.events.build(event_params)
    
      if (@event.save) 
          flash[:notice]    = "Event successfully saved."
