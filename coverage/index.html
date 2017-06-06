@@ -14,27 +14,27 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-06-05T22:47:33+00:00">2017-06-05T22:47:33+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-06-06T14:52:14+00:00">2017-06-06T14:52:14+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">90.15%</span></span>
+    (<span class="covered_percent"><span class="green">94.74%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.3
+         1.48
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>32</b> files in total.
-    <b>264</b> relevant lines. 
-    <span class="green"><b>238</b> lines covered</span> and
-    <span class="red"><b>26</b> lines missed </span>
+    <b>266</b> relevant lines. 
+    <span class="green"><b>252</b> lines covered</span> and
+    <span class="red"><b>14</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,12 +52,12 @@
       
       <tr>
         <td class="strong"><a href="#83d71b01638c998bc5d67b5ee7b0c64f00c6fda4" class="src_link" title="app/controllers/api/events_controller.rb">app/controllers/api/events_controller.rb</a></td>
-        <td class="red strong">40.91 %</td>
+        <td class="yellow strong">86.36 %</td>
         <td>42</td>
         <td>22</td>
-        <td>9</td>
-        <td>13</td>
-        <td>0.4</td>
+        <td>19</td>
+        <td>3</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -137,7 +137,7 @@
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>5.5</td>
+        <td>6.5</td>
       </tr>
       
       <tr>
@@ -292,12 +292,12 @@
       
       <tr>
         <td class="strong"><a href="#bd5c82f4993353de9efbb880abd71b118c94faac" class="src_link" title="spec/controllers/events_controller_spec.rb">spec/controllers/events_controller_spec.rb</a></td>
-        <td class="yellow strong">84.62 %</td>
-        <td>26</td>
-        <td>13</td>
-        <td>11</td>
-        <td>2</td>
-        <td>0.9</td>
+        <td class="green strong">100.0 %</td>
+        <td>27</td>
+        <td>15</td>
+        <td>15</td>
+        <td>0</td>
+        <td>1.7</td>
       </tr>
       
       <tr>
@@ -389,11 +389,11 @@
         <div class="source_table" id="83d71b01638c998bc5d67b5ee7b0c64f00c6fda4">
   <div class="header">
     <h3>app/controllers/api/events_controller.rb</h3>
-    <h4><span class="red">40.91 %</span> covered</h4>
+    <h4><span class="yellow">86.36 %</span> covered</h4>
     <div>
       <b>22</b> relevant lines. 
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>13</b> lines missed.</span>
+      <span class="green"><b>19</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
   
@@ -448,20 +448,20 @@
           <code class="ruby">   def set_access_control_headers</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
+        <li class="covered" data-hits="3" data-linenumber="9">
+          <span class="hits">3</span>
           
           <code class="ruby">     headers[&#39;Access-Control-Allow-Origin&#39;] = &#39;*&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="10">
-          
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
           
           <code class="ruby">     headers[&#39;Access-Control-Allow-Methods&#39;] = &#39;POST, GET, OPTIONS&#39;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
-          
+        <li class="covered" data-hits="3" data-linenumber="11">
+          <span class="hits">3</span>
           
           <code class="ruby">     headers[&#39;Access-Control-Allow-Headers&#39;] = &#39;Content-Type&#39;</code>
         </li>
@@ -508,8 +508,8 @@
           <code class="ruby">   def create</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
+        <li class="covered" data-hits="3" data-linenumber="19">
+          <span class="hits">3</span>
           
           <code class="ruby">     registered_application = RegisteredApplication.find_by(url: request.env[&#39;HTTP_ORIGIN&#39;])</code>
         </li>
@@ -520,8 +520,8 @@
           <code class="ruby">     </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
-          
+        <li class="covered" data-hits="3" data-linenumber="21">
+          <span class="hits">3</span>
           
           <code class="ruby">     if (registered_application == nil) </code>
         </li>
@@ -544,8 +544,8 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="25">
-          
+        <li class="covered" data-hits="3" data-linenumber="25">
+          <span class="hits">3</span>
           
           <code class="ruby">     @event = registered_application.events.new(event_params)</code>
         </li>
@@ -556,20 +556,20 @@
           <code class="ruby">    </code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="27">
-          
+        <li class="covered" data-hits="3" data-linenumber="27">
+          <span class="hits">3</span>
           
           <code class="ruby">     if @event.valid?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="28">
-          
+        <li class="covered" data-hits="3" data-linenumber="28">
+          <span class="hits">3</span>
           
           <code class="ruby">       @event.save!</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="29">
-          
+        <li class="covered" data-hits="3" data-linenumber="29">
+          <span class="hits">3</span>
           
           <code class="ruby">       render json: @event, status: :created</code>
         </li>
@@ -628,8 +628,8 @@
           <code class="ruby">    def event_params</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="39">
-          
+        <li class="covered" data-hits="3" data-linenumber="39">
+          <span class="hits">3</span>
           
           <code class="ruby">        params.require(:event).permit(:name)</code>
         </li>
@@ -1278,8 +1278,8 @@
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="28" data-linenumber="5">
-          <span class="hits">28</span>
+        <li class="covered" data-hits="34" data-linenumber="5">
+          <span class="hits">34</span>
           
           <code class="ruby">  default_scope { order(&#39;created_at DESC&#39;) }</code>
         </li>
@@ -4379,11 +4379,11 @@
         <div class="source_table" id="bd5c82f4993353de9efbb880abd71b118c94faac">
   <div class="header">
     <h3>spec/controllers/events_controller_spec.rb</h3>
-    <h4><span class="yellow">84.62 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>13</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>15</b> relevant lines. 
+      <span class="green"><b>15</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -4414,133 +4414,139 @@
           <code class="ruby">RSpec.describe API::EventsController, type: :controller do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="4" data-linenumber="5">
+          <span class="hits">4</span>
           
-          
-          <code class="ruby">    </code>
+          <code class="ruby">  let(:user)                           { create(:user) }</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="4" data-linenumber="6">
+          <span class="hits">4</span>
           
-          <code class="ruby">  describe &#39;not signed in&#39; do</code>
+          <code class="ruby">  let(:registered_application)         { create(:registered_application, user: user) }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">      </code>
+          <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="8">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
           
-          <code class="ruby">    let(:user)                           { create(:user) }</code>
+          <code class="ruby">  describe &quot;POST create&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    let(:registered_application)         { create(:registered_application, user: user) }</code>
+          <code class="ruby">    before do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      controller.request.env[&#39;HTTP_ORIGIN&#39;] = registered_application.url</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="11">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      post :create, params: {event: { name: &quot;About Page Load&quot; }}</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">    before do</code>
+          <code class="ruby">    it &quot;returns http success&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">      @user   = user</code>
+          <code class="ruby">      expect(response).to have_http_status(:success)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      sign_in   @user</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    describe &#39;POST create&#39;, :type =&gt; :api do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
           
           
-          <code class="ruby">      </code>
+          <code class="ruby">    </code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &#39;assigns the new event to @event&#39; do</code>
+          <code class="ruby">    it &quot;returns json content type&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
           
-          <code class="ruby">         URI &quot;https://lit-bayou-47361.herokuapp.com/users/sign_in&quot;,:format =&gt;:json</code>
+          <code class="ruby">      expect{JSON.parse(response.body)}.not_to raise_exception</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
-          
-          <code class="ruby">         post :create, params: {id: registered_application.id, event: {name: Faker::Company.name}}</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="21">
-          
-          
-          <code class="ruby">         expect(assigns(:event)).to eq Event.last</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">    end</code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">    </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;creates a event with the correct attributes&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      json = JSON.parse(response.body)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(json[&quot;name&quot;]).to eq(&quot;About Page Load&quot;)</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">end</code>
