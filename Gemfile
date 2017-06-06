@@ -44,7 +44,7 @@ end
  gem 'faker'
  gem 'devise'
  gem 'pundit'
- 
+ gem 'rack-cors', :require => 'rack/cors'
 
  # Use SCSS for stylesheets
  gem 'sass-rails', '~> 5.0'
