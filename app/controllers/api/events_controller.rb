@@ -2,8 +2,10 @@
  
    skip_before_action :authenticate_user!
    skip_before_action :verify_authenticity_token
- 
+
+=begin 
    before_action :set_access_control_headers
+=end
 
    def set_access_control_headers
      headers['Access-Control-Allow-Origin'] = '*'

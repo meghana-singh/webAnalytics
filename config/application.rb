@@ -27,5 +27,13 @@ module WebAnalytics
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    
+    #This will allow GET, POST or OPTIONS requests from any origin on any resource.
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
   end
 end
