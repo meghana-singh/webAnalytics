@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   devise_for :users
   
   namespace :api, defaults: { format: :json } do
-=begin    
+    
     match '/events', to: 'events#preflight', via: [:options]
-=end    
+    
      resources :events, only: [:create]
   end
   

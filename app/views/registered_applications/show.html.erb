@@ -10,20 +10,22 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <th class="col-md-4">Event Name</th>
-        <th class="col-md-4">Event Pie Chart</th>
-        <th class="col-md-4">Event Line Chart</th>
+        <th class="col-md-2">Event Name</th>
+        <th class="col-md-5">Event Pie Chart</th>
+        <th class="col-md-5">Event Line Chart</th>
       </tr>
     </thead>
     <tbody>
       <tr> 
         <% @events.each do |event, count| %>
           <td><%= event %></td>
-          <td><%= pie_chart @registered_application.events.group(:name).count %></td>
           <td><%= line_chart @registered_application.events.group_by_day(:created_at).count %></td>
+          <td><%= column_chart @registered_application.events.group_by_day_of_week(:created_at, format: "%a").count %></td>
         <% end %>
       </tr>
     </tbody>
   </table>
 </div>
-  
+
+<!--<td><%= line_chart @registered_application.events.group_by_day(:created_at).count %></td>-->  
+<!--<td><%= pie_chart @registered_application.events.group(:name).count %></td>-->

@@ -19,17 +19,21 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <th class="col-md-6">App Name</th>
-        <th class="col-md-6">Action</th>
+        <th class="col-md-2">App Name</th>
+        <th class="col-md-6">App URL</th>
+        <th class="col-md-2">Action</th>
       </tr>
     </thead>
     <tbody>
       <% @registered_applications.each do |app| %>
-      <tr> 
+      <tr>
+        <td class="col-md-2">
+           <%= "#{app.name}" %>            
+        </td> 
         <td class="col-md-6">
-           <%= button_to "#{app.name}: #{app.url}", {action: "show", id: app.id }, method: :get, class: "btn-group btn-group-justified btn btn-default" %>            
+           <%= button_to "#{app.url}", {action: "show", id: app.id }, method: :get, class: "btn-group btn-group-justified btn btn-default" %>            
         </td>
-        <td class="col-md-6">
+        <td class="col-md-2">
           <%= link_to [app] , method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this app' } do %>
             <i class="glyphicon glyphicon-trash"> </i>
           <% end %>
