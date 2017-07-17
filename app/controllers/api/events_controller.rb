@@ -7,9 +7,9 @@
    before_action :set_access_control_headers
 
    def set_access_control_headers
-     response.headers['Access-Control-Allow-Origin'] = '*'
      headers['Access-Control-Allow-Origin'] = '*'
      headers['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS'
+     headers['Access-Control-Request-Method'] = '*'
      headers['Access-Control-Allow-Headers'] = 'Content-Type'
    end
    
